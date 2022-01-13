@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CleanArchitecture</string>
+    <string name="my_trails">Minhas Trilhas</string>
+    <string name="access">Acessar</string>
+</resources>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@+id/trails_fragment">
+
+    <fragment
+        android:id="@+id/trails_fragment"
+        android:name="br.com.jwm.clean.architecture.trails.TrailsFragment"
+        android:label="TrailsFragment"
+        tools:layout="@layout/trails_fragment">
+
+        <action
+            android:id="@+id/action_trails_to_contents"
+            app:destination="@id/contents_fragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/contents_fragment"
+        android:name="br.com.jwm.clean.architecture.content.ContentsFragment"
+        android:label="ContentsFragment"
+        tools:layout="@layout/contents_fragment">
+
+        <argument
+            android:name="trailId"
+            app:argType="integer" />
+
+        <argument
+            android:name="trailTitle"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

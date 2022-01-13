@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_content_height"
+    android:layout_marginHorizontal="@dimen/spacing_small"
+    android:layout_marginBottom="@dimen/spacing_small"
+    android:background="@drawable/bg_content_card"
+    android:elevation="@dimen/card_content_elevation">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/card_content_image_size"
+        android:layout_height="@dimen/card_content_image_size"
+        android:layout_marginStart="@dimen/spacing_compact"
+        android:layout_marginTop="@dimen/spacing_compact"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:background="@drawable/bg_content_placeholder"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        style="@style/ContentCardTitle"
+        android:id="@+id/title"
+        android:layout_width="@dimen/none_spacing"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/card_content_title_margin_horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Introdução a Produtos Digitais" />
+
+    <TextView
+        android:id="@+id/contentType"
+        style="@style/ContentCardContentType"
+        android:layout_width="@dimen/none_spacing"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@+id/title"
+        tools:ignore="RtlSymmetry,SmallSp"
+        tools:text="LEAN DIGITAL" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/ContentCardDescription"
+        android:layout_width="@dimen/none_spacing"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/image"
+        app:layout_constraintTop_toBottomOf="@id/contentType"
+        tools:ignore="SmallSp"
+        tools:text="@tools:sample/lorem/random" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/access"
+        style="@style/ContentButtonAccess"
+        android:layout_marginVertical="@dimen/card_content_button_margin_vertical"
+        android:layout_marginStart="@dimen/card_content_button_margin_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image"
+        tools:ignore="RtlSymmetry,SmallSp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
